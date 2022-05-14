@@ -6,6 +6,8 @@ var { buildSchema } = require('graphql');
 var schema = buildSchema(`
   type Query {
     hello: String
+    konnichiwa: String
+    sayonara: String
   }
 `);
 
@@ -13,6 +15,12 @@ var schema = buildSchema(`
 var root = {
   hello: () => {
     return 'Hello world!';
+  },
+  konnichiwa: () => {
+    return 'Get back to code, bitch';
+  },
+  sayonara: () => {
+    return 'Fuck off';
   },
 };
 
